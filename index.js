@@ -23,6 +23,9 @@ async function run() {
     await client.connect();
     const dataCollection = client.db('reactchart').collection('data');
     
+    app.get('/',async (req,res)=>{
+      res.send("hello world")
+    })
 
     app.get('/data', async (req, res) => {
       try {
